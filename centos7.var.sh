@@ -1,3 +1,4 @@
+#!/bin/bash
 os_hostname=""
 www_hostname=""
 mail_hostname=""
