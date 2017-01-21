@@ -1,4 +1,4 @@
-
+#!/bin/bash
 prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
 \cp -p /etc/profile.d/z-user-data.sh /etc/profile.d/z-user-data.sh${prefix_org:?}
 cat <<'__EOD__' >/etc/profile.d/z-user-data.sh
