@@ -1,6 +1,5 @@
 prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
 \cp -p ~/.vimrc ~/.vimrc${prefix_org:?}
-
 cat <<'__EOD__' > ~/.vimrc
 """"""""""""""""""""""""""""""""
 ""  user defined
