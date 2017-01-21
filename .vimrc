@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""
 ""  user defined
 """"""""""""""""""""""""""""""""
-" Generate by user-data
+" Generate by iac
 "## common ##
 syntax on
 set showcmd
