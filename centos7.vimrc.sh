@@ -1,3 +1,4 @@
+cat '__EOD__' > ~/.vimrc
 """"""""""""""""""""""""""""""""
 ""  user defined
 """"""""""""""""""""""""""""""""
@@ -42,3 +43,4 @@ endfor
 imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
 "EOF
+__EOD__
