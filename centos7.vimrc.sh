@@ -1,7 +1,7 @@
 #!/bin/bash
 prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
 vimrc=~/.vimrc
-[ -f $vimrc ] || touch
+[ -f $vimrc ] || touch $vimrc
 \cp -p $vimrc $vimrc${prefix_org:?}
 cat <<'__EOD__' >$vimrc
 """"""""""""""""""""""""""""""""
