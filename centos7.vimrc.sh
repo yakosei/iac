@@ -1,3 +1,6 @@
+prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
+\cp -p ~/.vimrc ~/.vimrc${prefix_org:?}
+
 cat <<'__EOD__' > ~/.vimrc
 """"""""""""""""""""""""""""""""
 ""  user defined
@@ -44,3 +47,4 @@ imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
 "EOF
 __EOD__
+[ "$(diff ~/.vimrc ~/.vimrc$prefix_org)" ] || rm -f ~/.vimrc$prefix_org
