@@ -1,9 +1,9 @@
 #!/bin/bash
-prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
-profile_d=/etc/profile.d/z-user-data.sh
-[ -f $profile_d ] || touch $profile_d
-\cp -p $profile_d $profile_d${prefix_org:?}
-cat <<'__EOD__' >$profile_d
+var_prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
+var_profile_d=/etc/profile.d/z-user-data.sh
+[ -f $var_profile_d ] || touch $var_profile_d
+\cp -p $var_profile_d $var_profile_d${var_prefix_org:?}
+cat <<'__EOD__' >$var_profile_d
 # User specific aliases and functions
 # Generate by iac
 
@@ -54,4 +54,4 @@ alias vi='VimBackup'
 
 #EOF
 __EOD__
-[ "$(diff $profile_d $profile_d$prefix_org)" ] || rm -f $profile_d$prefix_org
+[ "$(diff $var_profile_d $var_profile_d$var_prefix_org)" ] || \mv -f $var_profile_d$var_prefix_org $var_profile_d
