@@ -1,9 +1,9 @@
 #!/bin/bash
-prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
-vimrc=~/.vimrc
-[ -f $vimrc ] || touch $vimrc
-\cp -p $vimrc $vimrc${prefix_org:?}
-cat <<'__EOD__' >$vimrc
+var_prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
+var_vimrc=~/.vimrc
+[ -f $var_vimrc ] || touch $var_vimrc
+\cp -p $var_vimrc $var_vimrc${var_prefix_org:?}
+cat <<'__EOD__' >$var_vimrc
 """"""""""""""""""""""""""""""""
 ""  user defined
 """"""""""""""""""""""""""""""""
@@ -49,4 +49,4 @@ imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
 
 "EOF
 __EOD__
-[ "$(diff $vimrc $vimrc$prefix_org)" ] || rm -f $vimrc$prefix_org
+[ "$(diff $var_vimrc $var_vimrc$var_prefix_org)" ] || \mv -f $var_vimrc$var_prefix_org $var_vimrc
