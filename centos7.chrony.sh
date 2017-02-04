@@ -8,4 +8,5 @@ sed -r -e 's/^[ \t]*(server 0.[a-z]+.pool.ntp.org iburst.*)/# '"$(date +'Edit %Y
 [ "$(diff $var_ntp_conf $var_ntp_conf$var_prefix_org)" ] || \mv -f $var_ntp_conf$var_prefix_org $var_ntp_conf
 systemctl start chronyd
 systemctl enable chronyd
+systemctl status chronyd
 chronyc -a makestep
