@@ -8,7 +8,7 @@ var_conf=/etc/named.conf
 curl iac.yakosei.com/etc/named.conf >$var_conf
 [ "$(diff $var_conf $var_conf$var_prefix_org)" ] || \mv -f $var_conf$var_prefix_org $var_conf
 
-var_zone=/var/named/chroot/var/named/0x0130.com.zone
+var_zone=/var/named/0x0130.com.zone
 \cp -p $var_zone $var_zone${var_prefix_org:?}
 curl iac.yakosei.com/var/named/0x0130.com.zone >$var_zone
 [ "$(diff $var_zone $var_zone$var_prefix_org)" ] || \mv -f $var_zone$var_prefix_org $var_zone
