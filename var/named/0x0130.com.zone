@@ -1,0 +1,15 @@
+$TTL 3600
+@               IN      SOA ns01.0x0130.com. info.0x0130.com. (
+                        2017020501 ; serial
+                        3600       ; refresh 1hr
+                        900        ; retry 15min
+                        604800     ; expire 1w
+                        86400      ; min 24hr
+)
+
+                IN      NS      ns01.0x0130.com.
+base            IN      A       192.168.1.216
+www             IN      A       192.168.1.224
+kvm             IN      A       192.168.1.240
+pi              IN      A       192.168.1.245
+
