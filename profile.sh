@@ -1,6 +1,6 @@
 #!/bin/bash
 var_prefix_org=$(date +'-%Y%m%d-%H%M%S.org')
-var_profile_d=/etc/profile.d/z-user-data.sh
+var_profile_d=/etc/profile.d/z-profile.sh
 [ -f $var_profile_d ] || touch $var_profile_d
 \cp -p $var_profile_d $var_profile_d${var_prefix_org:?}
 cat <<'__EOD__' >$var_profile_d
