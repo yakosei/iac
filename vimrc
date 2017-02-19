@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""""
 ""  user defined
 """"""""""""""""""""""""""""""""
-" Edit 20170219
+" Edit 20170220
 "## common ##
 syntax on
 set showcmd
@@ -17,6 +17,12 @@ set scrolloff=5
 "set visualbell
 set visualbell t_vb=
 set noerrorbells
+
+"## backup ##
+set backup
+set writebackup
+"set backupdir=$HOME/.vimbackup
+au BufWritePre * let &bex = '_' . strftime("%Y%m%d_%H%M%S") . '.backup'
 
 "## tab ##
 "set expandtab
