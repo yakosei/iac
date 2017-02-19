@@ -27,8 +27,8 @@ set noerrorbells
 "## tab ##
 set expandtab
 set shiftwidth=2
-set tabstop=2
 "set autoindent
+set tabstop=2
 
 "## search ##
 set hlsearch
